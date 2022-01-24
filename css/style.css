@@ -112,6 +112,11 @@ html body {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  background-color: currentColor;
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -128,11 +133,6 @@ html body {
   z-index: -1;
   transition-duration: 200ms;
   transition-property: transform background-color;
-}
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  background-color: currentColor;
-  opacity: 0;
 }
 .btn--white {
   background-color: #fff;

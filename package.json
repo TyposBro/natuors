@@ -1,7 +1,15 @@
 {
   "name": "natuors",
   "version": "1.0.0",
+  "description": "Landing page",
   "main": "index.js",
+  "scripts": {
+    "compile": "sass sass/main.scss css/style.css -w"
+  },
   "author": "Azizbek Umidjonov <khasanjonovich@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.49.0"
+  }
 }

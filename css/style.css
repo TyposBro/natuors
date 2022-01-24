@@ -1,12 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 *,
 *::before,
 *::after {
@@ -18,8 +9,7 @@ Dark green: #28b485
 html {
   font-size: 62.5%;
 }
-
-body {
+html body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -31,28 +21,20 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(
-      to right,
-      #7ed56fcc,
-      rgba(40, 180, 133, 0.801)
-    ),
-    url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
 }
-
 .header__text-box {
   position: absolute;
   top: 40%;
@@ -60,6 +42,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
@@ -68,7 +51,6 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
-
 .heading-primary--main {
   display: block;
   font-size: 6rem;
@@ -94,18 +76,15 @@ body {
     opacity: 0;
     transform: translateX(-10rem);
   }
-
   80% {
     opacity: 0.8;
     transform: translateX(1rem);
   }
-
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
-
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -120,9 +99,7 @@ body {
     transform: translate(0);
   }
 }
-
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
@@ -131,22 +108,14 @@ body {
   transition: transform 0.2s;
   position: relative;
 }
-
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
 .btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
 .btn::after {
   content: "";
   display: inline-block;
@@ -160,17 +129,18 @@ body {
   transition-duration: 200ms;
   transition-property: transform background-color;
 }
-
-.btn--white::after {
-  color: white;
-}
-
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   background-color: currentColor;
   opacity: 0;
 }
-
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+.btn--white::after {
+  color: #fff;
+}
 .btn--animated {
   animation-name: moveUp;
   animation-duration: 1000ms;
@@ -184,9 +154,10 @@ body {
     opacity: 0;
     transform: translateY(5rem);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+/*# sourceMappingURL=style.css.map */

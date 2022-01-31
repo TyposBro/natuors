@@ -1,0 +1,52 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.row {
+  max-width: variables.$grid-width;
+  background-color: gray;
+  margin: 0 auto;
+
+  @include mixins.clearfix;
+
+  &:not(:last-child) {
+    margin-bottom: variables.$grid-col-vertical-margin;
+  }
+
+  [class^="col-"] {
+    float: left;
+    background-color: #abcdef;
+
+    &:not(:last-child) {
+      margin-right: variables.$grid-col-horizontal-margin;
+    }
+  }
+
+  .col-1-to-2 {
+    width: calc((100% - #{variables.$grid-col-horizontal-margin}) / 2);
+  }
+
+  .col-1-to-3 {
+    width: calc((100% - 2 * #{variables.$grid-col-horizontal-margin}) / 3);
+  }
+
+  .col-2-to-3 {
+    width: calc(
+      (100% - 2 * #{variables.$grid-col-horizontal-margin}) * 2 / 3 + #{variables.$grid-col-horizontal-margin}
+    );
+  }
+
+  .col-1-to-4 {
+    width: calc((100% - 3 * #{variables.$grid-col-horizontal-margin}) / 4);
+  }
+
+  .col-2-to-4 {
+    width: calc(
+      (100% - 3 * #{variables.$grid-col-horizontal-margin}) * 2 / 4 + #{variables.$grid-col-horizontal-margin}
+    );
+  }
+  .col-3-to-4 {
+    width: calc(
+      (100% - 3 * #{variables.$grid-col-horizontal-margin}) * 3 / 4 + 2 * #{variables.$grid-col-horizontal-margin}
+    );
+  }
+}

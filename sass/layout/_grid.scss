@@ -3,7 +3,6 @@
 
 .row {
   max-width: variables.$grid-width;
-  background-color: gray;
   margin: 0 auto;
 
   @include mixins.clearfix;
@@ -14,7 +13,6 @@
 
   [class^="col-"] {
     float: left;
-    background-color: #abcdef;
 
     &:not(:last-child) {
       margin-right: variables.$grid-col-horizontal-margin;

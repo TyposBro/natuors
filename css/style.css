@@ -187,7 +187,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: gray;
   margin: 0 auto;
   overflow: auto;
 }
@@ -201,7 +200,6 @@ body {
 }
 .row [class^=col-] {
   float: left;
-  background-color: #abcdef;
 }
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;

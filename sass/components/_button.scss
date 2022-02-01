@@ -8,7 +8,7 @@
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
-    transition: transform 0.2s;
+    transition: transform 200ms;
     position: relative;
   }
 
@@ -38,7 +38,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transition-duration: 200ms;
+    transition-duration: 300ms;
     transition-property: transform background-color;
   }
 
@@ -57,5 +57,30 @@
     animation-delay: 1000ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: variables.$font-size-default;
+    color: variables.$color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid variables.$color-primary;
+    padding: 3px;
+    transition-property: transform color background-color box-shadow;
+    transition-duration: 500ms;
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    color: variables.$color-white;
+    background-color: variables.$color-primary-light;
+    box-shadow: 0 1rem 2rem 0.1rem rgba(variables.$color-grey-dark, 0.2);
+  }
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem 1rem rgba(variables.$color-grey-dark, 0.2);
   }
 }

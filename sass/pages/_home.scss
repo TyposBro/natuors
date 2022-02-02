@@ -11,7 +11,7 @@
   padding: 20rem 0;
   background-image: linear-gradient(
       to right bottom,
-      rgba(variables.$color-primary, 0.8),
+      rgba(variables.$color-primary-light, 0.8),
       rgba(variables.$color-primary-dark, 0.8)
     ),
     url("../img/nat-4.jpg");
@@ -26,6 +26,11 @@
 
 .section-tours {
   background-color: variables.$color-grey-light-1;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem;
+}
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: variables.$color-grey-light-1;
 }

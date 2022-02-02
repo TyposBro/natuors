@@ -51,6 +51,15 @@
     }
   }
 
+  &--green {
+    background-color: variables.$color-primary;
+    color: variables.$color-white;
+
+    &::after {
+      color: variables.$color-primary;
+    }
+  }
+
   &--animated {
     animation-name: moveUp;
     animation-duration: 1000ms;

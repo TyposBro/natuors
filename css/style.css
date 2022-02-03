@@ -214,7 +214,7 @@ body {
 .btn-text:hover {
   transform: translateY(-0.5rem);
   color: #fff;
-  background-color: #7ed56f;
+  background-color: #55c57a;
   box-shadow: 0 1rem 2rem 0.1rem rgba(119, 119, 119, 0.2);
 }
 .btn-text:active {
@@ -390,6 +390,64 @@ body {
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.03);
 }
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 0.3rem;
+  padding: 6rem;
+  position: relative;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+}
+.story__shape {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  margin: 0.4rem;
+  background-color: orangered;
+  shape-outside: circle(40% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: translateX(-3rem) skewX(12deg);
+}
+.story__img {
+  height: 100%;
+  transform: translateX(-4rem) scale(1.2);
+  transition-property: opacity transform filter;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+  backface-visibility: hidden;
+}
+.story__text {
+  transform: skewX(12deg);
+}
+.story__caption {
+  position: absolute;
+  text-transform: uppercase;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  transition-property: opacity transform filter;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+  backface-visibility: hidden;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.story:hover .story__img {
+  filter: blur(0.1rem) brightness(0.9);
+  transform: translateX(-4rem) scale(1);
+  backface-visibility: hidden;
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");

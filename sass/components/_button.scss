@@ -85,7 +85,7 @@
   &:hover {
     transform: translateY(-0.5rem);
     color: variables.$color-white;
-    background-color: variables.$color-primary-light;
+    background-color: variables.$color-primary;
     box-shadow: 0 1rem 2rem 0.1rem rgba(variables.$color-grey-dark, 0.2);
   }
   &:active {

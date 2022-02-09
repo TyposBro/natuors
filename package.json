@@ -4,8 +4,9 @@
   "description": "Landing page",
   "main": "index.js",
   "scripts": {
-    "compile": "sass sass/main.scss css/style.css -w",
-    "start": "live-server"
+    "saas": "sass sass/main.scss css/style.css -w",
+    "live": "live-server",
+    "start": "live-server & sass sass/main.scss css/style.css -w"
   },
   "author": "Azizbek Umidjonov <khasanjonovich@gmail.com>",
   "license": "MIT",

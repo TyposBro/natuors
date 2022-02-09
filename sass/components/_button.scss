@@ -1,8 +1,11 @@
 @use "../abstracts/variables";
 
 .btn {
+  &,
   &:link,
   &:visited {
+    // works only for <a href=""/> elem with visited/link pseudo-classes, button doesn't
+    // work-around add & above to spesify btn class alone
     text-decoration: none;
     text-transform: uppercase;
     padding: 1.5rem 4rem;
@@ -10,6 +13,11 @@
     border-radius: 10rem;
     transition: transform 200ms;
     position: relative;
+
+    // form needs <button type="submit"/>
+    // button has border and cursor pointer
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -23,7 +31,10 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    // outline:none for .btn:focus since it gets big green border on focus
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }

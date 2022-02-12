@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 *,
 *::before,
@@ -9,10 +10,28 @@
 }
 
 html {
-  // This resets 1rem to 10px
+  // !This resets 1rem to 10px
   font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include mixins.responsive(big-screen) {
+    font-size: 75%; //* 1rem = 12px = 16px * 75%
+  }
+
+  @include mixins.responsive(tab-port) {
+    font-size: 56.25%; //* 1rem = 9px
+  }
+
+  @include mixins.responsive(tab-port) {
+    font-size: 50%; //* 1rem = 8px
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include mixins.responsive(tab-port) {
+    padding: 0;
+  }
 }

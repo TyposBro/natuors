@@ -1,20 +1,20 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 .section-about {
   background-color: variables.$color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
+
+  @include mixins.responsive(tab-port) {
+    padding: 20rem 0;
+  }
 }
 
 .section-features {
   background-color: variables.$color-white;
   padding: 20rem 0;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(variables.$color-primary-light, 0.8),
-      rgba(variables.$color-primary-dark, 0.8)
-    ),
-    url("../img/nat-4.jpg");
+  background-image: linear-gradient(to right bottom, rgba(variables.$color-primary-light, 0.8), rgba(variables.$color-primary-dark, 0.8)), url("../img/nat-4.jpg");
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem;
@@ -22,42 +22,65 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include mixins.responsive(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-tours {
   background-color: variables.$color-grey-light-1;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
+
+  @include mixins.responsive(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
 }
 
 .section-stories {
   position: relative;
   padding: 15rem 0;
+
+  @include mixins.responsive(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(
-    to right bottom,
-    variables.$color-primary-light,
-    variables.$color-primary-dark
-  );
+  background-image: linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark);
+
+  @include mixins.responsive(tab-port) {
+    padding: 10rem 0;
+  }
 }
 .book {
-  background-image: linear-gradient(
-      105deg,
-      rgba(variables.$color-white, 0.9) 0%,
-      rgba(variables.$color-white, 0.9) 50%,
-      transparent 50%
-    ),
-    url(../../img/nat-10.jpg);
+  background-image: linear-gradient(105deg, rgba(variables.$color-white, 0.9) 0%, rgba(variables.$color-white, 0.9) 50%, transparent 50%), url(../../img/nat-10.jpg);
   background-size: 100%;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba($color: variables.$color-black, $alpha: 0.2);
-  height: 50rem;
+
+  @include mixins.responsive(tab-land) {
+    background-image: linear-gradient(105deg, rgba(variables.$color-white, 0.9) 0%, rgba(variables.$color-white, 0.9) 65%, transparent 65%), url(../../img/nat-10.jpg);
+    background-size: cover;
+  }
+
+  @include mixins.responsive(tab-port) {
+    background-image: linear-gradient(to right, rgba(variables.$color-white, 0.9) 0%, rgba(variables.$color-white, 0.9) 100%), url(../../img/nat-10.jpg);
+    background-size: cover;
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include mixins.responsive(tab-land) {
+      width: 65%;
+    }
+
+    @include mixins.responsive(tab-land) {
+      width: 100%;
+    }
   }
 }

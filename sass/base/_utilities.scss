@@ -1,4 +1,6 @@
-// always add !important for utilities since we want them to override all of the inherited styles
+// ! always add !important for utilities since we want them to override all of the inherited styles
+
+@use "../abstracts/mixins";
 
 .u-center-text {
   text-align: center !important;
@@ -9,10 +11,18 @@
 }
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
+
+  @include mixins.responsive(tab-port) {
+    margin-bottom: 2.5rem !important;
+  }
 }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+
+  @include mixins.responsive(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-top-big {

@@ -9,6 +9,15 @@
 
   &:not(:last-child) {
     margin-bottom: variables.$grid-col-vertical-margin;
+
+    @include mixins.responsive(tab-port) {
+      margin-bottom: variables.$grid-col-vertical-margin-small;
+    }
+  }
+
+  @include mixins.responsive(tab-port) {
+    max-width: variables.$grid-width-small;
+    padding: 0 2rem;
   }
 
   [class^="col-"] {
@@ -16,6 +25,15 @@
 
     &:not(:last-child) {
       margin-right: variables.$grid-col-horizontal-margin;
+
+      @include mixins.responsive(tab-port) {
+        margin-right: 0;
+        margin-bottom: variables.$grid-col-vertical-margin-small;
+      }
+    }
+
+    @include mixins.responsive(tab-port) {
+      width: 100% !important;
     }
   }
 
@@ -28,9 +46,7 @@
   }
 
   .col-2-to-3 {
-    width: calc(
-      (100% - 2 * #{variables.$grid-col-horizontal-margin}) * 2 / 3 + #{variables.$grid-col-horizontal-margin}
-    );
+    width: calc((100% - 2 * #{variables.$grid-col-horizontal-margin}) * 2 / 3 + #{variables.$grid-col-horizontal-margin});
   }
 
   .col-1-to-4 {
@@ -38,13 +54,9 @@
   }
 
   .col-2-to-4 {
-    width: calc(
-      (100% - 3 * #{variables.$grid-col-horizontal-margin}) * 2 / 4 + #{variables.$grid-col-horizontal-margin}
-    );
+    width: calc((100% - 3 * #{variables.$grid-col-horizontal-margin}) * 2 / 4 + #{variables.$grid-col-horizontal-margin});
   }
   .col-3-to-4 {
-    width: calc(
-      (100% - 3 * #{variables.$grid-col-horizontal-margin}) * 3 / 4 + 2 * #{variables.$grid-col-horizontal-margin}
-    );
+    width: calc((100% - 3 * #{variables.$grid-col-horizontal-margin}) * 3 / 4 + 2 * #{variables.$grid-col-horizontal-margin});
   }
 }

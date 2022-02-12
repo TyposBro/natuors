@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 .form {
   &__group:not(:last-child) {
@@ -17,6 +18,10 @@
     width: 90%;
     transition-property: border-bottom;
     transition-duration: 500ms;
+
+    @include mixins.responsive(tab-port) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -52,6 +57,11 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+
+    @include mixins.responsive(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
   &__radio-label {
     font-size: variables.$font-size-default;
@@ -73,10 +83,7 @@
     top: -0.5rem;
 
     &::after {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      @include mixins.centerDiv;
       content: "";
       display: block;
       height: 1.3rem;

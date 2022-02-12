@@ -4,14 +4,14 @@
   "description": "Landing page",
   "main": "index.js",
   "scripts": {
-    "saas": "sass sass/main.scss css/style.css -w",
-    "live": "live-server",
-    "start": "live-server & sass sass/main.scss css/style.css -w"
+    "watch": "live-server & sass sass/main.scss css/style.comp.css -w",
+    "compile:saas": "sass sass/main.scss css/style.css",
+    "concat:css": "sass sass/main.scss css/style.css"
   },
   "author": "Azizbek Umidjonov <khasanjonovich@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
+    "concat": "^1.0.3",
     "live-server": "^1.2.1",
     "sass": "^1.49.0"
   }

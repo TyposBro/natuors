@@ -128,7 +128,8 @@
   //! BIG Media Query
   //* Tablet Portrait Mode
 
-  @include mixins.responsive(tab-port) {
+  // @include mixins.responsive(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 0.3rem;
     background-color: variables.$color-white;

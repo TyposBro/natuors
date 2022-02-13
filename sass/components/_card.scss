@@ -54,13 +54,13 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     &--1 {
-      background-image: linear-gradient(to right bottom, variables.$color-secondary-light, variables.$color-secondary-dark), url(../../img/nat-5.jpg);
+      background-image: linear-gradient(to right bottom, variables.$color-secondary-light, variables.$color-secondary-dark), url(../img/nat-5.jpg);
     }
     &--2 {
-      background-image: linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark), url(../../img/nat-6.jpg);
+      background-image: linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark), url(../img/nat-6.jpg);
     }
     &--3 {
-      background-image: linear-gradient(to right bottom, variables.$color-tertiary-light, variables.$color-tertiary-dark), url(../../img/nat-7.jpg);
+      background-image: linear-gradient(to right bottom, variables.$color-tertiary-light, variables.$color-tertiary-dark), url(../img/nat-7.jpg);
     }
   }
 
